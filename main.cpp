@@ -44,7 +44,7 @@ class Book {  // Book Class
     
 void saveBooks(){      // Save Books
     ofstream bookOut ("book.txt", ios:: app);
-    bookOut << isbn << "," << title << "," << author << "," << "Available : "<< available << endl;
+    bookOut << isbn << "," << title << "," << author << "," << " Available: "<< available << endl;
     bookOut.close();
 	}
 		

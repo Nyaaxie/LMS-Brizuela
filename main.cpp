@@ -42,13 +42,13 @@ class Book {  // Book Class
     string getTitle() { return title; }
     bool isAvailable() { return available; }
     
-void saveBooks(){
+void saveBooks(){      // Save Books
     ofstream bookOut ("book.txt", ios:: app);
-    bookOut << isbn << "," << title << "," << author << "," << available << endl;
+    bookOut << isbn << "," << title << "," << author << "," << "Available : "<< available << endl;
     bookOut.close();
 	}
 		
-void displayBooks() {
+void displayBooks() {    // Display Books
     ifstream bookIn("book.txt");
     string line;
     cout << "\n--- Book List ---\n";

@@ -60,13 +60,13 @@ void displayBooks() {    // Display Books
 				
 };
 
-class LibrarianUser {  // Librarian User Class
+class LibraryUser {  // Library User Class
 	private :
 		string userId, name, title;
 	public:
 		
-	LibrarianUser(){}
-	LibrarianUser(string id, string n){
+	LibraryUser(){}
+	LibraryUser(string id, string n){
 		userId = id;
 		name = n;
 	}
@@ -122,7 +122,7 @@ void returnBook(string isbn) {  // To return a book
 };
 
 
-class LibrarianStaff {  // Librarian Staff Class
+class LibraryStaff {  // Library Staff Class
 	public: 
 	void addNewBooks(){  // Add a new books
 		string t, i , a;
@@ -148,7 +148,7 @@ class LibrarianStaff {  // Librarian Staff Class
         cout << "Enter Username: ";
         getline(cin, n);
 
-        LibrarianUser u(id, n);
+        LibraryUser u(id, n);
         u.saveUser();
         cout << "User registered." << endl;
     }
@@ -213,8 +213,8 @@ class LibrarianStaff {  // Librarian Staff Class
  
 int main(){
 	
-	LibrarianStaff lib;
-	LibrarianUser libUser;
+	LibraryStaff lib;
+	LibraryUser libUser;
 	Book b;
 
 	int choice, choiceMethodLibStaff, choiceMethodLibUser;
@@ -223,14 +223,14 @@ int main(){
 	cout << "Welcome to Library System" << endl;
 	// Menu
 	do{
-	cout << "[ 1 ] LibrarianUser" << endl;
-	cout << "[ 2 ] Librarian Staff" << endl;
+	cout << "[ 1 ] LibraryUser" << endl;
+	cout << "[ 2 ] Library Staff" << endl;
 	cout << "[ 3 ] Log Out" << endl;
 	cout << "Choose: ";
 	cin >> choice;
 	
 		
-	if (choice == 1) {  // Librarian User login
+	if (choice == 1) {  // Library User login
     string id, name;
     cin.ignore();
     cout << "Enter your User ID: ";
@@ -241,11 +241,11 @@ int main(){
     if (!isUserRegistered(id, name)) { // if the user not registered
         cout << "User not registered. Please contact library staff." << endl;
     } else {
-        libUser = LibrarianUser(id, name); // if the user is registered
+        libUser = LibraryUser(id, name); // if the user is registered
         cout << "Welcome " << name << "! You can now borrow/return books.\n";
 
 do {
-    cout << "\n--- Librarian User Menu ---" << endl; // menu librarian user
+    cout << "\n--- Library User Menu ---" << endl; // menu Library User
     cout << "[ 1 ] Borrow Book" << endl;
     cout << "[ 2 ] Return Book" << endl;
     cout << "[ 3 ] Exit" << endl;
@@ -272,11 +272,11 @@ if (choiceMethodLibUser == 1) {
 }
     }
     
-else if(choice == 2){  // Librarian Staff Section
+else if(choice == 2){  // Library Staff Section
 	    cin.ignore();
 		do{
     cout << endl;
-    cout << "Librarian Staff Menu" << endl;
+    cout << "Library Staff Menu" << endl;
     cout << "[ 1 ] Add new Books" << endl;
     cout << "[ 2 ] Remove Books" << endl;
     cout << "[ 3 ] Display All Books" << endl;

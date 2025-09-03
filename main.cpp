@@ -254,6 +254,7 @@ do {
     
 if (choiceMethodLibUser == 1) {
     string isbn;
+    b.displayBooks();
     cout << "Enter ISBN of book to borrow: ";
     cin >> isbn;
     libUser.borrowBook(isbn);

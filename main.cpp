@@ -24,7 +24,7 @@ bool isBookAvailable(const string& isbn) {  // If Book is available
     return false;
 }
 
-class Book {  // Book Class
+class Book {  // Book Class function
 	private: 
 	string title, isbn, author;
 	bool available;
